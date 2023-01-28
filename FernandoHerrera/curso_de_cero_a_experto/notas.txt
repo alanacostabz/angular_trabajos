@@ -1,0 +1,338 @@
+CURSO DE ANGULAR DE CERO A EXPERTO - FERNANDO HERRERA
+
+  CONCEPTOS GENERALES PARA EMPEZAR CON ANGULAR Y TYPESCRIPT
+
+    ¿QUE ES ANGULAR?
+      - es un marco basado en typescript para crear interfaces de usuario
+      - desarollado por google y reelanzado en 2016 como la secuela de angular js
+
+    ¿QUE ES TYPESCRIPT?
+      - ts es un lenguaje de programacion libre y de codigo abierto desarrollado y mantenido por microsoft, es un superconjunto de javascript, que esencialmente añade tipos estáticos y objetos basados en clases
+      - viene a ser un super set (es decir extiende caracteristicas) del standard javascript
+      - es mantenido y soportado por microsoft
+      - ofrece tipado estricto y flexible
+      - mejora enormemente la legibilidad del código
+      - nos permite usar características modernas de js
+
+    VENTAJAS DE TYPESCRIPT
+      - el tipado estricto nos ayuda a saber cómo funcionan las cosas
+      - ayudas instantánea de funciones y métodos
+      - mejora enormemente el intellisense
+
+    ¿POR QUÉ ANGULAR USA TYPESCRIPT?
+      - para tener todos los beneficios de typescript
+      - tenemos la ayuda y un itellinse fuerte
+      - tenemos tipado estricto y errores en momento de escritura
+      - nos permite la insyección de dependencias (permite acceder a cualquier objeto rápidamente en cualquier clase, sin tener que
+        irnos a un árbol de componentes, sin tene que ir a buscar en un monton de archivos donde se encuentra)
+
+    MITOS Y REALIDADES DE ANGULAR
+      - angular es mejor que react, vue, svelte: depende de lo que se necesite
+      - angular es mas ordenado que react, vue y svelte: depende del desarrollador
+      - angular es complicado de aprender: depende de la persona 
+      - angular libera nuevas versiones a cada rato: lo hace cada 6 meses
+      - las aplicaciones de angular son muy pesadas: el 99% del código está a la aplicación final
+      - angular no es seo friendly: se puede hacer usando server side rendering utilizando angular universal
+      - angular no soporta diferentes patrones como redux: falso, permite implementar cualquier patrón 
+      - angular 2,5,...,10,11,12 es el mismo angular: verdad
+      - solo puedo correr código de typescript en mis aplicaciones de angular: false, casi cualquier de js funciona
+
+    
+    QUÉ ES ANGULAR
+      - es un marco de trabajo estandarizado (framework)
+      - viene con todo lo que necesitas para trabajar
+      - es modular
+      - google es quien lo mantiene hoy en dia
+
+    BLOQUES FUNDAMENTALES DE ANGULAR
+      - componentes:
+        - se pueden ver como un bloque de código que tienen su segmento html con una contra parte de typescript que usualmente es una clase
+        - la diferencia entre las paginas y los componentes es que las paginas estan pensadas para que sean las rutas de mi aplicacion y los componentes son pequenas piezas que pueden estar dentro de paginas pero tambien los componentes pueden estar dentro de otros componentes, la principal diferencia entre estas dos es que usualmente las paginas son para las rutas (el componente principal de la ruta)
+
+      - rutas:
+        - son diferentes componentes que se pueden mostrar basados en el url del navegador web o el url en el cual se encuentra el cliente
+
+      - directivas:
+        - hay tres tipos:
+          1. directivas de componentes: son muy parecidas a un componente con la diferencia de que tienen un pedazo de código html reutilizable
+
+          2. directivas estructurales: modifican el dom o el html ya sea añadiendo elementos o removiendo elementos
+          
+          3. directivas de atributos: básicamente cambian la apariencia o comportamiento de un elemento, otro componente o una directiva
+
+        - custom directives:
+          - la directiva de atributo, tambien llamada directiva personalizada, se usa cuando no se necesita una plantilla adicional, la directiva puede ejecutar lógica y aplicar cambios visuales al elemento al que se aplica, esto es útil si se desea modiciar el comportamiento o el estilo de los elementos html existentesm sin envolverlos en un nuevo componente
+
+          - sirven para construir una directiva personalizada es decir en vez de usar una directive existente como ngClass o *ngIf podemos construir nuestras propias directivas y aumentar la extensibilidad de nuestro código
+
+      - servicios:
+        - un servicio es una clase, comunmente decorada con el decorador injector de angular, mismo que indica que este servicio puede inyectar otras dependencias de la aplicacion, ya sean otros servicios como el http para hacer consultas ajax
+        - son singletons bastante fuertes que permiten trabajar toda la aplicacion con información centalizada (manejo de estado)
+        - son lugares centralizados de información
+        - el servicio es una clase abstracta en la cual se coloca la informacion y los metodos para interactuar con fuentes externas o para manipular el estado de la informacion de nuestra aplicacion
+        - son objetos que se instancian solo una vez durante la vida útil de la aplicación, contienen métodos que mantienen los datos a lo largo de una aplicación, es decir los datos están disponibles todo el tiempo
+
+      - inyeccion de dependencias 
+        - es un patron de dise;o de software usado en la programacion orientada a objetos, que trata de solucionar las necesidades de creacion de los objetos de una manera practica, util, escalable, con una falta de versitalidad del codigo
+        - la inyección o di es uno de los conceptos fundamentales de angular
+        - di esta conectado al marco angular y permite que las clases con decoradores angulares, como componentes, directivas, pipes e inyectables, configuren las dependencias que necesitan
+        - En la programacion orientada a objetos la inyeccion de dependencia (di) es el poroceso de proporcionar un rescurso que requiere una determinada pieza de código, ese recurso requerido que a menudo es un componente de la propia aplicación, se denomina dependencia
+
+      - módulos: 
+        - permiten agrupar todos los conceptos anteriores e incluso otros módulos, por ejemplo: modulo de productos, clientes, autenticación, proveedores, etc
+
+    ONE WAY DATA BINDING A TWO-WAY DATA BINDING
+      - el enlace de datos unidireccional y bidireccional son de las formas importantes en las que podemos intercambiar datos del comopnente al dom y viceversa, el intercambio de datos entre el componente y la vista nos ayudará a construir aplicaciones web dinámicas e interactivas
+
+      - one way data binding: el enlace de datos unidireccional vinculará los datos del componente a la vista (dom) o de la vista al componente, el enlace de datos es unidireccional, solo puede vincular los datos del componeente a la vista o de la vista al componente
+
+      - two-way data binding: el enlace de datos bidireccional en angular ayuda a los usuarios a intercambiar datos dle componente a la vista y de la vista a componente, ayudará a los usuario a establecer una comunicación bidireccional
+
+    CICLOS DE VIDA
+      - justo con su constructor son ciertos pasos o métodos que dispara angular
+
+    DIRECTIVAS
+      - son clases que agregan un comportamiento adicional a los elementos en las aplicaciones angular
+      - las directivas integradas se utilizan para administrar formularios, listas, estios y lo que ven los usuarios
+      - permiten usar sentencias if, bucles for, y agregar otro comportamiento al código html
+      - existen 3 tipos:
+        1. directivas de atributos
+        2. directivas estructurales
+        3. directivas de componente
+
+    MODULOS
+      - los ngmodules son contenedores para un bloque cohesivo de codigo dedicado a un dominio de aplicacion, un flujo de trabajo o un conjunto de capacidades estrechamente relacionadas, pueden contener componentes, proveedores de servicios y otros archivos de codigo cuyo alcance esta definido por el ngmodule que los contiene
+
+      - es un mecanismo para agrupar componentes, directivas, pipes, y servicios que estan relacionados, de tal forma que se pueden combinar con otros modulos para crear una aplicacion
+      
+      - se puede pensar en una aplicacion como angular como un rompecabezas en el que se necesita cada pieza (o cada modulo) para poder ver la imagen completa
+
+      - el objetivo de los modulos es ayudarnos a agrupar componentes y piezas de nuestra aplicacion que tienen sentido entre si 
+
+      - hay varios objetivos que cumplen los modulos
+        - encapsular las cosas 
+        - ayudarnos con la carga perezoza (lazy load)
+
+      - declaraciones: nos dicen que cosa tiene este modulo, que componentes, que pipes, que otras cosas
+
+      - exports: que cosas quiero que sean visibles a fuera de este modulo, que cosas quiero hacer publicas o visibles a fuera de este modulo
+
+      - imports: ahi solo van modulos que son objetos que se colocan en los imports
+
+    PIPES
+      - sirven para transformar visualmente la información
+      - es una forma de transformar la información que esta puesta en el html
+      - es un conjunto de componentes personalizados ya estilizados y ayuda a desarrollar mas rapido
+      - es una herramienta que nos permite modificar o transformar la informacion presentada en pantalla, la data de la informacion no se modifica, solo se transforma y se presenta de una determinada manera pero es solo a efectos de presentación
+      - transforman la data de manera visual no hace ninguna modificacion interna en la data
+      - todos los pipes de angular a la fecha
+        - uppercase
+        - lowercase
+        - titlecase
+        - date
+        - decimal
+        - currency
+        - percent
+        - i18nselect
+        - keyvalue
+        - json
+        - async 
+      
+
+    PRIMENG
+      - es una coleccion de componentes de interfaz de usuario enrequecidos para angular, todos los widgets son de codigo abierto y de uso gratuito bajo la licencia de mit
+      - es desrrollado por primetek informatics un proveedor con a;os de experiencia en el desarrollo de soluciones de interfaz de usuario de codigo abierto
+
+    RUTAS
+      - basicamente le dicen a angular que componente debe de mostar basado en una ruta en particular
+
+      - el método forRoot() crea un NgModule que contiene todas las directivas, las rutas dadas y el propio servicio enrutador, el método forChild() crea un ngModule que contiene todas las directivas y las rutas dadas, pero no incluye el servicio Router
+
+      - RouterModule.forRoot() debe estar en AppModule, es el que instancia los servicios del enrutador, todos los demas módulos utilizarán RouterModule.forChild() para manejar enrutamiento, solo se debe tener un forRoot en una aplicación
+
+      - forChild registra rutas, mientras que forRoot regustra rutas y configura/inicializa el propio enrutador
+
+      - forRoot: angular utiliza el forRoout para poner todas las rutas en el módulo principal ráiz (es decir todo lo que no es lazy loader carga de manera inmediata)
+
+      - forChild: angular solo carga esa rutas cuando lo necesite
+
+      - RouterLink:
+        - es una directiva para navegar declarativamente a una ruta diferente, navigate y Router.navigateByUrl son dos metodos disponibles para la clase de enrutador para navegar imperativamente en sus calases de componentes
+
+    @VIEWCHILD
+      - nos permite inyectar en una clase de componente referencias elementos utilizados dentro de su plantilla para eso se debe usar, usando viewchild podemos inyectar facilmente componentes, directivas o elementos dom simples
+
+
+    RXJS
+      - reactive extensions for javascript, es una libreria para programacion reactiva usando observables que hacen mas facil la creacion de codigo asincrono o basado en callbacks
+      - es una extensión reactiva para javascript, es una biblioteca de js que usa observables para trabajar con programación reactiva que se ocupa de llamadas de datos asicronos, devoluciones de llamadas y programas basados en eventos, rxjs se puede usar con otras bibliotecas y marcos js
+
+    OBSERVABLE
+      - angular utiliza observables para manejar operaciones asincronas, por ejemplo se pueden definir eventos personalizados que envian la informacion de un componente hijo a un componente padre, el modulo http usa observables para manejar las peticiones y respuestas ajax
+      - es una funcion que brinda soporte para enviar mensajes entre diferentes partes de su aplicacion de una sola página, esta carácteristica se usa con frecuencia en angular por que es el responsable del manejor de múltiples valores, la programación asincriona en javascript también los procesos de manejos de eventos
+
+    OF
+      - sirve para crear observables en base al argumento que le mandemos
+      - rxjs if(): es un operador creacional que le permite crear un observable rxjs a partir de una secuencia de valores, segun los documentos oficiales: of() convierte los argumentos en una secuencia observable
+
+    combineLatest
+      - combina los valores de todos los observables de entrada, para ello se suscribe a cada uno de los observables en orden, y cuando alguno de los observables emite, recoge las emisiones mas reciente dentro de cada uno en un array
+
+    SUBJECTS
+      - es un tipo especial de observable que permite la multidifusion de valores a muchos observadores, mientras los observadores simples son de monodifusion (cada observador suscrito es propietario de una ejecucion independiente del observable) los sujetos son de multidifusion
+
+    SUBSCRIBE
+      - es un metodo en angular que conecta el observer con enventos observable, siempre que se realza algun cambio en estos observables, se ejecuta un codigo y observa los resultados o cambios mediante el metodo subscribe
+
+    SWITCHMAP 
+      - mapea cada valor del observable interno, se suscribe a el y luego comienza a emitir los valores desde el, crea un nuevo observable interno por cada valor que recibe de la fuente
+
+    TAP
+      - es un operador que dispara un efecto secundario
+      - el operador tap de angular devuelve un observable que es identico a la fuente, no modifica la transmision de ninguna manera, el operador tap es util para registrar el valor, depurar la secuencia para obtener los valores correctos o realizar cualquier otro efecto secundario
+      - es un operador rxjs que devuelve un observable que es identico a la fuente, no modifica la transmisión de ninguna manera, es util para registar un valor, depurar la secuencia para obtener los valores correctos o realizar cualquier otro efecto secundario
+
+    MAP 
+      - es un operador rxjs de transformación que se utiliza para transformar los elementos emitidos por un observable aplicando una función a cada elemento, aplica una función de proyecto dada a cada valor emitido por el observable fuente y luego emite los valores resultantes como un observable
+      - aplica una función de proyecto determinado a cada valor emitido por el observable de origen y emite los valores resultantes como un observable
+
+    LAZYLOAD
+      - nos permite organizar una aplicacion angular que no cargue de forma completa toda la aplicacion web en una unica llamada al servidor, sino que retrace la carga hasta el momento de su utilizacion
+      - lazyload es un enfoque para limitar los modulos que se cargan a los que el usuario necesita, esto puede mejorar el rendimiento de su aplicacion y reducir el tama;o del paquete inicial
+      - de forma predeterminada, angular usa lazyload para cargar los modulos
+      - lazyload es la practica de retrasar la carga o la inicializacion de recursos u objetos hasta que realmente se necesiten para mejorar el rendimineto y ahorrar recursos del sistema
+
+    FLEXLAYOUT
+      - en escencia flexlayout es un framework css que se integra con la mayoria de los spa actuales (angular, react, vue) e implementa todo lo necesario para que los desarrolladoes puedan definir los diseños de sus aplicaciones de una manera organizada y legible para todos
+      - es una biblioteca independiente desarrollada por el equipo de angular para diseñar diseños sofisticados, al crear una página html en angular, el uso de flex-layout nos permite crear facilmente diseños de página basados en flexbox con un conjunto de directivas disponibles para usar en sus plantillas
+
+    ANGULAR MATERIAL
+      - es un módulo construido por y para angular, dicho módulo permite implementar componentes angular con diseño basado en material design
+      - es una biblioteca de componentes de interfaz de usuario (ui) que los desarrolladores pueden usar en sus proyectos de angular para acelerar el desarrollo de interfaces de usuarios elegantes y consientes, angular material le ofrece componentes de interfaz de usuarios hermosos y reutilizables, como tarjetas entradas, tablas de datos y selectores de fecha y mucho más
+      - es una biblioteca de componentes de interfaz de usuarios para desarrolladores de angular, los componentes de angular material ayudan a construir páginas web y aplicaciones web atractivas, consistentes y funcionales mientras se adhieren a los principios de diseño web moderno como la portabilidad del dispositivo y la degradación elegante
+
+    GUARDS
+      - los guards en angular, son de alguna manera: middlewares que se ejecutan antes de cargar una ruta y determinan si se puede cargar dicha ruta o no, existen 4 tipos diferentes de guards (o combinaciones de estos) son los siguientes:
+        1. CanActivate: mira si el usuario puede acceder a una página determinada
+        2. CanActivateChild: mira si el usuario puede acceder a las páginas hijas de una determinada ruta
+        3. CanDeactivate: mira si el usuario puede salir de una página, es decir, que podemos hacer que aparezca un mensaje, por ejemplo, de confirmación, si el usuario tiene cambios sin guardar
+        4. CanLoad: sirve para evitar que la aplicación cargue los módulos perezosamente si el usuario no está autorizado a hacerlo
+      - los routes guards de angular son interfaces que pueden decirle al enrutador si debe o no permitir la navegación a una ruta solicitada, toman esta desición buscando un valor de retorno verdadero o falso de una clase que implementa la interaz de guard dada
+      - es un servicio que nos sirve para implementar reglas de validación en las rutas
+
+    FORMULARIOS:
+      - los formularios en angular están construidos sobre el formulario html estándar, para ayudarnos a crear controladores personalizados y simplificar la experiencia de validacion de campos
+
+      - hay dos formas principales de crear formularios en angular:
+
+        1. template-driven form: es la forma mas sencilla de crear un formulario en angular, utiliza la directiva de angular two-way data-binding directive (ngModel) para crear y adminisrar la instancia de formulario subyacente, además como siguiera el nombre, un template form está impulsado principalmente por el componente de vista
+
+        2. reactive forms: brindan acceso a la información sobre un control determinado a través de propiedades y métodos proporcionados con cada instancia, estas propiedades y métodos de la case abstractcontrol subyacente se usan para controlar el estado del formulario y determinar cuándo mostrar mensajes al manejar la validación de entrada, es una biblioteca de creación de formularios para angular que facilita la creación de formularios reactivos, un formulario reactivo es uno que actualiza automaticamente los datos del formulario cuando cambian los datos subyacentes
+
+        - la principal diferencia entre template forms y reactive forms es que cuando usamos aproximacion por template le decimos a angular que se encargue de manejar todo el formulario de manera automatica y que todos los cambios que nosotros hagamos y especificaciones de los detalles que vamos a tener la haga del lado del html, en cambio la proximacion de formularios reactivos procura de que el html sea lo mas basico posible y que todo el trabajo pesado lo tengamos en el componente de typescript
+
+    LIFECYCKE HOOKS
+      - son un conjunto de métodos predefinidos de angular que se activan en un momento concreto del ciclo de vida de un componente, estos hooks pueden crear propieades, detectar cambios de propiedades, etc
+      - son métodos que podemos crear en nuestros componentes (directivas, etc) y que podemos llamar cuando angular ejecute cierta cosa en nuestra aplicación
+      - un hook básicamente nos permite a nosotros ejecutar una función o método cuando algo sucede en el ciclo de vida de un componente de angular
+
+        - constructor: es un método por defecto de la clase typescript, el cual se ejecuta en el momento que la clase es instanciada, se encarga de asegurar la correcta inicialización de los campos, tanto de la clase como de sus subclases, sirve para hacer inyecciones de dependencias que un componente necesitará o si ocupamos algún tipo de inicialización antes de que el html sea construido (por decirlo de alguna manera)
+
+        - ngOnChange:
+          - responde cuando angular establece o restablece las propiedades de entrada vinculadas a datos, el método recibe un objeto SimpleChanges de valores de propiedad actuales y anteriores
+
+        - ngOnInit: 
+          - es un lifecycle hook llamado por angular para indicar que angular ha terminado de crear el componente, es cuando ya el componente está inicializado y nosotros podemos tener acceso al html, por ejemplo se pueden hacer peticiones http, traer información de servicio, etc y llenar propiedades de manera segura en nuestro componente
+          - inicializa la directiva o el componente despues de que angular primero muestra las propiedades vinculadas a los datos y establezca las propiedades de entrada de la directiva o el componente
+
+        - ngDoCheck:
+          - detecta y actua sobre los cambios que angular no puede o no detectará por si solo
+
+        - ngAferContentInit:
+          - responde después de que angular proyecte contenido externo en la vista del componente o en la vista en la que se encuentra la directiva
+
+        - ngAfterContentChecked:
+          - responde despues de que angular verifica el contenido proyectado en la directiva o el componente
+
+        - ngAfterViewIinit:
+          - reponde despues de que angular inicialice las vistas del cimponente y las vistas secundarias, o la vista que contiene la directiva 
+
+        - ngAfterViewChecked:
+          - responde despues de que angular verifica las vistas del componente y las vistas secundarias, o la vista que contiene la directiva
+
+        - ngOnDestroy:
+          - limpia justo antes de angular destruya la directiva o el componente, anula la suscripcion de observables y separa los controladores de eventos para evitar perdidas de memoria
+
+      
+      - MAPAS
+        - mapbox: (es un api similar a la de google maps): es una plataforma en la nube de mapeo y ubicación para desarrolladores, crean bloques de construcción, sdk y apis para que los desarrolladores construyan reconocimiento de ubicacion en tiempo real en nuestras aplicaciones
+
+
+    CONCEPTOS
+      - decoradores: es un concepto propio y exclusivo de typescript, que le permiten a angular poder diferenciar cada una de las clases para que sea algun tipo especial, el proposito completo de los decoradores de angular es almacenar meta datos sobre una clase, metodo o propiedad, cuando configura un componente, esta proporcionando metadatos para esa clase que le dice angular que tiene un componente y que ese componente tiene una configuracion especifica
+      
+      - interfaz: en typescript solo contiene la definición de métodos y propiedades, no su implementación, es la funcionalidad de la clase que realiza la conexión entre la interfaz proporcionando la conexión de todos los parámetros de la interfaz, es una estructura que define el contrato en la aplicación
+
+      - desestructuración de objetos: habilita la extracción de propiedades y métodos de algún objeto de una manera muy sencilla
+
+      - clases: las clases en typescript son muy parecidas a las de javascript, la diferencia entre las clases e interfaces es que las clases nos sirven para crear instancias, mientras que las interfaces se pueden ver como un contrato que nos dice que se debe implementar al crear una clase con dicha interfaz
+
+      - constructor: en typescript es una funcion que se ejecuta automaticamente al intanciar una clase
+
+      - genéricos: en typescript se pueden entender como una especie de "plantilla" de código, mediante la cua podemos aplicar un tipo de dato determinado a varios puntos de nuestro código, sirven para aprovechar código, sin tener que duplicarlo por causa de cambios de tipo y evitando la necesidad de usar el tipo "any"
+
+      - decoradores: en typescript sirven para expandir o para añadir funcionalidades, en angular se utilizan mucho para poder diferenciar si una clase es un componente, pipe, directiva, etc, es una función que expande su clase añadiendole funcionalidades, es un patrón de diseño estructural que permite añadir dinámicamente nuevos comportamientos a objetos colocándolos dentro de objetos especiales que los envuelven 'wrappers', es una función que agrega metadatos o funcionalidad extra a una clase propiedad o método
+
+    - singleton: singleton o instancia unica es un patron de dise;o que permite restringir la creacion de objetos pertenecientes a una clase o el valor de un tipo a un unico objeto, su intencion consiste en garantizar que una clase solo tenga una instancia y proporcionar un punto de acceso global a ella
+
+    - @Input y @Ouput() dan un componente secundario una forma de comunicarse con su componente principal.
+      - @Input() permite que un componente principal actualice los datos en el componente secundario. Por el contrario, @Output() permite que el hijo envie datos a un componente principal
+
+    - provideIn: 'root'
+      - es un decorador que marca una clase como disponible para ser proporcionada e inyectada como dependencia, provideIn determina que inyectores proporcionará el inyectable
+
+    - dependency injection in angular y service:
+      - la lógica de un servicio es distinta dentro de su clase, angular interpreta una clase como un servicio inyectable basado en el decorador  @injectable, los servicios inyectables deben registrarse con un inyector, el componente instancia un servicio mientras que el inyector proporciona esa instancia
+      - la clase inyector inyecta dependencias de 3 formas:
+        - a traves de un constructor:
+          - en la inyección del constructor, el constructor proporciona el servicio (dependencia) a través del constructor de la clase cliente
+        - a traves de una propiedad:
+          tambien conocida como injection setter, el inyector proporciona la depedencia a través de una propiedad pública de la clase cliente
+        - a trabes de un metodo:
+          - en este tipo de inyección, la clase de cliente implementa una interfaz que declara los métodos para proporcionar la dependencia y el inyector usa esta interfaz para proporcionar la dependencia a la clase de cliente
+
+      - getters y setters: se usan a menudo como una de las formas de interceptar cambios de propiedad de entrada, por ejemplo si tenemos dos componentes, productos como componente principal y producto como componente secundario con dos entradas (precio, nombre)
+
+      - ngForm: crea una instancia de FormGroup de nivel superior y la vincula para realizar un siguimiento del valor del formulario agregado y el estado de validación, es una api auxiliar para crear formularios en angular, proporciona accesos directos para crear la instancia FormControl, FormGroup o FormArray, reduce el código requerido para escribir los formularios complejos
+
+      - form controls: son clases que pueden contener tanto los valores de datos como la información de validación de cualquier elemento de formulario, cada entrada de formulario que tenga en un formulario reactivo debe estar vinculada por un control de formulario, estas son las unidades básicas que componen las formas reactivas 
+
+      - FormBuilder: nos ayuda a crear formularios bastantes complejos o muy grandes que tengan la notación de un objeto literal de javascript
+
+      - FormGroup: cuando trabajos con formularios reactivos en angular normalmente creamos un FormGroup para agrupar los controles visuales que se les asocian un objeto de la clase FormControl a cada uno, podemos crear dentro de un FormGroup otro FormGroup que agrupe un conjunto de controles relacionados
+
+      - FormControl: en angular los controles de formulario son clases que pueden contener tanto los valores de datos como la información de validación de cualquier elemento de formulario, cada entrada de formulario que tenga un formulario reactivo debe estar vinculada por un control de formulario, estas son las unidades básicas que componen las formas reactivas
+
+      - Diferencia entre FormGroup y FormBuilder: en angular un formulario reactivo es un FormGroup que se compone de FormControls, FormBuilder es a clase que se utiliza para crear FormGroups y FormControls
+
+      - local reference: hace referencia a todas las propiedades del elemento html al que se a;ada, a las que podemos tener acceso a traves de esa misma local reference, podemos usar local references a lo largo de toda nuestra template, pero unicamente ahi no en ningun otro archivo, son una buena caracteristica para la comunicacion entre los componentes y las plantillas, se pueden colocar en cualquier elemento de html escribiendo un hashtag con el nombre de su eleccion en el elemento html
+
+      - expresión regular: es una cadena de caracteres que es utilizada para describir o encontrar patrones dentro de otros strings, en base al uso de delimitadores y ciertas reglas de sintáxis
+      
+
+
+    RECURSOS:
+      - https://app.quicktype.io/
+      - https://animate.style/
+      - https://restcountries.com/
+      - https://www.primefaces.org/primeng/
+      - https://angular.io/
+      - https://material.angular.io/
+      - https://m3.material.io/resources/icons
+      - https://angular.io/guide/reactive-forms
+      - https://getbootstrap.com/
+      - https://restcountries.com/
+      - https://www.mapbox.com/
+      - https://www.google.com/maps
+      - https://valor-software.com/ng2-charts/ 
+      - https://color.adobe.com/create/color-wheel

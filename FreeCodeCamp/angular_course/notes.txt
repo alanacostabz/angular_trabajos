@@ -1,0 +1,70 @@
+ANGULAR FOR BEGINNERS COURSE
+
+  WHAT IS ANGULAR?
+    - a ui framework built by google
+    - a component-based framework for building scalable app
+    - provied collection of libraries to cover features like routing, forms
+
+  FRAMEWORKS VS LIBRARIES
+    - frameworks
+      - framework generally contains a set of libraries
+      - you cand extend the framework
+      - some example are angular, .net, ionic, express, js
+
+    - libraries
+      - libraries generally perform specific operation
+      - you can combine multiple libs to build apps
+      - some examples are react, momentjs, lodash
+
+  FEATURES OF ANGULAR
+    - template
+    - data binding
+    - forms
+    - routing
+    - observables
+    - pwa
+
+  INTRODUCTION TO TYPESCRIPT
+    - a strongly typed programming language
+    - created and maintained by microsoft
+    - superset of javascript
+
+  WHY TYPESCRIPT?
+    - compiles to javascript
+    - keeps your code evergreen
+    - supported by all major libraries and frameworks
+
+  TYPE SAFETY
+    - keeps your application free from type errors
+    - languages like c#, java asre example of type safe language
+    - keeps your js code free from undefined and null values
+    - in typescript types are stripped when your code is converted to js
+
+  INSTALLING AND CREATING FIRST TYPESCRIPT PROGRAM
+    - install node
+    - use lastest version of nodejs
+    - 'npm init' to create package.json
+    - install typescript 'npm i typescript'
+    - initialize typescript
+    - 'tsc --init'
+
+  SINGLE PAGE APPLICATION (SPA)
+    - stands fpr single page appplications
+    - you can use modern frameworks like angular, react, or vue to create spa
+    - spa does not make requests to server for every url requests
+
+  HOW ANGULAR HELPS
+    - angular has routing to create SPA
+    - angular also offers ssr(server side rendering) which supports spa
+
+  TYPESCRIPT
+    DATA TYPES
+      - string
+      - number
+      - boolean
+      - array
+      - enum
+      - tuple
+      - any 
+      - void
+      - never

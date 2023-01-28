@@ -1,0 +1,171 @@
+CURSO ANGULAR - PILDORAS INFORMATICAS
+
+  TEMARIO
+    - que es angular
+    - instalacion de angular y software necesario
+    - creacion de primera aplicacion
+    - estructura de aplicacion angular
+    - creacion de componentes
+    - biding
+    - directivas de utilidad
+    - forms
+    - comunicacion
+    - servicios
+    - routing
+    - http y autenticacion
+    - despliegue de aplicaciones
+
+
+  REQUISITOS PREVIOS
+    - requisitos minimos:
+      - conocimiento basico-medio de javascript
+    
+    - requisitos deseados
+      - conocimientos medio-avanzado de javascript
+
+  
+  QUE ES ANGULAR
+    - un framework para crear aplicaciones web SPA (Single Page Application)
+
+  QUIEN LO HA DESARROLLADO
+    - google
+
+  QUE CARACTERISTICAS TIENE
+    - separa frontend y backend de la aplicacion
+    - simplifica el codigo
+    - sigue el patron mvc
+    - basado en componentes
+    - es de codigo abierto
+
+  QUE LENGUAJE UTILIZA
+    - typescript
+
+  POR QUE UTILIZAR ANGULAR
+    - el desarrollo de aplicaciones rapido
+      - la navegacion por ellas tambien
+    - es modular
+      - reutilizacion
+    - facil mantenimiento
+    - es multiplataforma
+    - futuro estable
+    - gran soporte de herramientas
+    - creciente demanda
+
+  SOFTWARE NECESARIO
+    - node.js
+      - entorno javascript en tiempo de ejecucion del lado del servidor
+    - npm (node package manager)
+      - administrador de paquetes de nodes.js
+    - angular
+      - angular cli (command line interface)
+    - visual studio code
+      - un editor como otros tantos
+      - de microsoft
+    - git (adicional)
+        - recomendable, pero no impresindible
+
+   CONCEPTOS
+    - spa (single-page application):
+      - o aplicación de página única, es una aplicación web o es un sitio web que cabe en una
+        sola página con el propósito de dar una experiencia más  fluida a los usuarios, como
+        como si fuera una aplicación de escritorio
+      - es un tipo de aplicación web que ejecuta todo su contenido en una sola página, funciona
+        cargando el contenido htmlm css y js por completo al abrir la web
+
+    - módulos:
+      - es un conjunto de código dedicado a un ambito concreto de la aplicación , o una 
+        funcionalidad especifica y se define mediante una clase decorada con @NgModule,
+        toda aplicación de angular tiene al menos un módulo de angular, el módulo principal 
+        (o root module)
+      - agrupa un conjunto de artefactos angular, como son componentes, directivas, pipes,
+        servicios que forman parte de ese mismo módulo, dicho esto, representa una agrupación
+        lógica en lo que podríamos llamar un área funcional de nuestra aplicación (ej. módulo de contactos, módulo de administración, etc)
+
+    - ng:
+      - significa next generacion, ya que angular es la proxima generacion de html
+    - ngmodules:
+      - son contenedores para un bloque cohesivo de código dedicado o un domino de aplicación,
+        un flujo de trabajo o un conjunto de capacidades estrechamente relacionadas
+      - pueden contener componentes, proveedores de servicios y otros archivos de código cuyo
+        alcance está definido por el ngmodule que los contiene
+
+    - componentes:
+      - un componente en angular es un elemento que está compuesto por: un archivo que será
+        nuestro template (app.component.html), el cual es nuestro html. que es el que se va
+        visualizar en la interfaz de usuario, la vista o en términos más simples los que vas a ver en la página
+
+    - interpolación de texto:
+      - permite incorporar cadenas tipo de texto dinámicas en nuestro templates html
+      - permite cambiar dinámicamente que va aparecer en la vista de una aplicación
+
+    - property binding
+      - binding: unión, vínculo, puente
+      - básicamente es crear una especie de unión, vínculo o puente entre las propiedades que
+        se declaran en el archivo typescript con el objeto que nosotros podemos insertar en 
+        nuestro template, página web
+      - es la manera que dispone angular para controlar y modificar las propiedades de los distintos elementos de html
+
+    - event binding
+      - biding: unión, vínculo, puente
+      - event: evento, desencadenante de la función
+      - event binding permite escuchar y responder a las acciones del usuario, como pulsaciones de teclas, movimientos del mouse, clics y toques (atributos html y propiedades del dom)
+
+    - two way binding
+      - binding: unión, vínculo, puente
+      - binding bidireccional va tanto del html al typescript como del typescript al html
+      - es el mecanismo mediante el cual vamos a realizar comunicaciones/sincronizaciones (bindings) bidireccionales, es decir, del template al modelo y del modelo al template a la vez
+      - se refiere a compartir datos entre una clase de componente y su plantilla, si se cambian los datos en un lugar se actualizara automaticamente en el otro extremo
+      - se necesita:
+        - uso de la diectiva ngmodel
+        - uso de banana in box (refla de sintaxis) -> [()]
+
+    - sugar sintax
+      - termino acuñado por Peter J. Landin en 1964 para referirse a los añadidos a la sintaxis de un lenguaje de programacion diseñados para hacer algunas construcciones mas facil de leer o expresar
+
+    - directivas
+      - son un elemento que se aplica a las etiquetas html que añaden funcionalidad a la etiqueta donde se aplican
+      - sirven para:
+        - modicar la estructura del dom
+        - modificar la apariencia
+      - en angular, las directivas se definen como clase que pueden agrear un nuevo comportamiento a los elementos de la plantilla o modificar el comportamienito existente
+      - el proposito de las directivas en angular es maniobrar el dom, ya sea agregando nuevos elementos al dom o eliminando elementos e incluso cambiando de apariencia los elementos del dom
+
+      - tipos:
+        1. componente
+          - angular 
+          - personalizadas
+        2. estructura
+        3. atributo
+
+      - atributo:
+        - ngif
+        - ngfor
+        - ngswitch
+        - ngplural
+        - ngtemplate
+        - ngcomponentoutlet
+
+      - estructural:
+        - ngclass
+        - ngstyle
+        - ngmodel
+
+        - ngclass y ngstyle
+          - modifican los atributos css de forma dinámica para en función de una condición destacar
+            algo que aparezca en nuestra aplicación de angular
+
+      - componente:
+        - angular
+          - @component
+          - @module
+        - personalizadas (custom)
+
+    - comunicacion entre componentes
+      - @Input()
+        - de padre a hijo
+      - @Output()
+        - de hijo a padre
+
+    
+
+  
